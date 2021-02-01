@@ -29,7 +29,7 @@ class Response
 
         if ($resp === null || !property_exists($resp, 'status') || !$resp->status) {
             throw new ApiException(
-                "Paystack Request failed with response: '" .
+                "Request failed with response: '" .
                 $this->messageFromApiJson($resp)."'",
                 $resp,
                 $this->requestObject
